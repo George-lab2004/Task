@@ -1,0 +1,41 @@
+.About {
+  background-image: url("../../images/2.jpg");
+  position: relative;
+}
+.About::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #6d91eeb2; /* Blue with 50% opacity */
+  z-index: 1;
+}
+.trapezoid {
+  background-color: #3498db; /* Any color you want */
+  position: relative;
+  border-top-left-radius: 500px;
+  border-top: solid;
+  /* Rounding the top-left corner */
+}
+.first {
+  background-color: #6d91ee;
+  width: 100%; /* Triangle height */
+  position: relative;
+  clip-path: polygon(36% 0, 100% 0, 100% 100%, 0% 100%);
+  /* Triangle with right angle at top-left */
+}
+@media (max-width: 768px) {
+  .first {
+    clip-path: none; /* Remove polygon on smaller screens */
+    width: 100%; /* Ensure it takes full width */
+  }
+}
+/* .second {
+  background-color: violet;
+  width: 60%;
+  border-top-left-radius: 30px;
+  z-index: 20000;
+  padding-left: 300px;
+} */
